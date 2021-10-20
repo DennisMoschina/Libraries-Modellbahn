@@ -25,7 +25,7 @@
   "dependencies":
   [
     {
-      "name": "dfrobot/DFRobotDFPlayerMini",
+      "name": "DFRobotDFPlayerMini",
       "version": "^1.0.5"
     },
     {

@@ -25,6 +25,10 @@
   "dependencies":
   [
     {
+      "name": "dfrobot/DFRobotDFPlayerMini",
+      "version": "^1.0.5"
+    },
+    {
       "name": "FastLED",
       "version": "^3.4.0"
     }

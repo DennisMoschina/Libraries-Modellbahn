@@ -16,6 +16,12 @@
 #include "NeoPixel.h"
 #include "LightEffects.h"
 
+#include "DioramaMaster.h"
+#include "DioramaSlave.h"
+#include "SoundMaster.h"
+#include "SoundSlave.h"
+#include "SoundDioramaSlave.h"
+#include "SoundDioramaMaster.h"
 
 /**
 * @defgroup rgbled RGB LED

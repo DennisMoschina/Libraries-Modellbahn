@@ -26,6 +26,7 @@ int Button::buttonPressed() {
 
     return this->callback.invoke();
   }
+  return 0;
 }
 
 void Button::checkForTime() {

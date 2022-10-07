@@ -1,9 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Modellbahn: CallLambda Strukturreferenz</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -17,7 +17,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
   $(document).ready(function() { init_search(); });
 /* @license-end */
 </script>
@@ -28,20 +28,17 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
+ <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="ModellbahnAG Logo.jpg"/></td>
-  <td id="projectalign" style="padding-left: 0.5em;">
+  <td id="projectalign">
    <div id="projectname">Modellbahn
    </div>
    <div id="projectbrief">Libraries für verschiedene Funktionen in der ModellbahnAG</div>
   </td>
-   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
-          <img id="MSearchSelect" src="search/mag_sel.svg"
-               onmouseover="return searchBox.OnSearchSelectShow()"
-               onmouseout="return searchBox.OnSearchSelectHide()"
-               alt=""/>
-          <input type="text" id="MSearchField" value="Suchen" accesskey="S"
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"
                onfocus="searchBox.OnSearchFieldFocus(true)" 
                onblur="searchBox.OnSearchFieldFocus(false)" 
                onkeyup="searchBox.OnSearchFieldChange(event)"/>
@@ -55,10 +52,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Erzeugt von Doxygen 1.9.1 -->
+<!-- Erzeugt von Doxygen 1.9.5 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'Suchen','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 </div><!-- top -->
@@ -73,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Suchen','.html');
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(document).ready(function(){initNavTree('struct_call_lambda.html',''); initResizable(); });
 /* @license-end */
 </script>
@@ -87,33 +84,47 @@ $(document).ready(function(){initNavTree('struct_call_lambda.html',''); initResi
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="header">
-  <div class="headertitle">
-<div class="title">CallLambda Strukturreferenz<div class="ingroups"><a class="el" href="group__button.html">Button Management</a></div></div>  </div>
+  <div class="headertitle"><div class="title">CallLambda Strukturreferenz<div class="ingroups"><a class="el" href="group__button.html">Button Management</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Lambdafunktionen (auch anonyme Funktionen genannt) unterscheiden sich eigentlich nicht so sehr von den schon bekannten Funktionen (benannte Funktionen). Sie können allerdings viel besser als Parameter an andere Funktionen übergeben werden. Genau dieses Verhalten machen wir uns in <a class="el" href="class_button.html#a54a2b43509e6c28ba8b0a4c003ded6ba" title="Definiere eine Funktion, die ausgeführt wird, sobald der Button gedrückt wurde.">Button::setCallback()</a> zu nutze. Eine Lambdafunktion erstellen wir nicht wie sonst mit.  
+<p>Lambdafunktionen (auch anonyme Funktionen genannt) unterscheiden sich eigentlich nicht so sehr von den schon bekannten Funktionen (benannte Funktionen). Sie können allerdings viel besser als Parameter an andere Funktionen übergeben werden. Genau dieses Verhalten machen wir uns in <a class="el" href="class_button.html#a54a2b43509e6c28ba8b0a4c003ded6ba" title="Definiere eine Funktion, die ausgeführt wird, sobald der Button gedrückt wurde.">Button::setCallback()</a> zu nutze. Eine Lambdafunktion erstellen wir nicht wie sonst mit <code class="JavaDocCode"><br/>
+void meineFunktion(parameter) {<br/>
+    Tu irgendwas<br/>
+}<br/>
+</code> sondern mit einem ganz neuen Syntax, der allerdings nicht komplizierter ist: <code class="JavaDocCode"><br/>
+CallLambda([Variablen von Aussen die wir verwenden wollen] (Parameter) {<br/>
+Tu irgendwas; return 0; })<br/>
+</code> Mit <code>return</code> 0 stellen wir sicher das alles funktioniert hat.  
  <a href="struct_call_lambda.html#details">Mehr ...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_button_8h_source.html">Button.h</a>&gt;</code></p>
 <a name="details" id="details"></a><h2 class="groupheader">Ausführliche Beschreibung</h2>
-<div class="textblock"><p>Lambdafunktionen (auch anonyme Funktionen genannt) unterscheiden sich eigentlich nicht so sehr von den schon bekannten Funktionen (benannte Funktionen). Sie können allerdings viel besser als Parameter an andere Funktionen übergeben werden. Genau dieses Verhalten machen wir uns in <a class="el" href="class_button.html#a54a2b43509e6c28ba8b0a4c003ded6ba" title="Definiere eine Funktion, die ausgeführt wird, sobald der Button gedrückt wurde.">Button::setCallback()</a> zu nutze. Eine Lambdafunktion erstellen wir nicht wie sonst mit. </p>
-<div class="fragment"><div class="line"><span class="keywordtype">void</span> meineFunktion(parameter) {</div>
-<div class="line">    Tu irgendwas</div>
-<div class="line">}</div>
-</div><!-- fragment --><p> sondern mit einem ganz neuen Syntax, der allerdings nicht komplizierter ist: </p><div class="fragment"><div class="line"><a class="code" href="struct_call_lambda.html">CallLambda</a>([Variablen von Aussen die wir verwenden wollen] (Parameter) {</div>
-<div class="line">Tu irgendwas; <span class="keywordflow">return</span> 0; })</div>
-<div class="ttc" id="astruct_call_lambda_html"><div class="ttname"><a href="struct_call_lambda.html">CallLambda</a></div><div class="ttdoc">Lambdafunktionen (auch anonyme Funktionen genannt) unterscheiden sich eigentlich nicht so sehr von de...</div></div>
-</div><!-- fragment --><p> Mit <code>return</code> 0 stellen wir sicher das alles funktioniert hat. </p>
-<p>Diese Funktion können wir jetzt einfach mit </p><div class="fragment"><div class="line">meineFunktion(<a class="code" href="struct_call_lambda.html">CallLambda</a>([] () { Tu etwas; <span class="keywordflow">return</span> 0; }))</div>
-</div><!-- fragment --><p> als Parameter an eine andere Funktion übergeben. </p>
-<p>Lambdafunktionen werden häufig für sogenannte <a href="https://de.wikipedia.org/wiki/Rückruffunktion">Callback Funktionen</a> verwendet. </p>
+<div class="textblock"><p >Lambdafunktionen (auch anonyme Funktionen genannt) unterscheiden sich eigentlich nicht so sehr von den schon bekannten Funktionen (benannte Funktionen). Sie können allerdings viel besser als Parameter an andere Funktionen übergeben werden. Genau dieses Verhalten machen wir uns in <a class="el" href="class_button.html#a54a2b43509e6c28ba8b0a4c003ded6ba" title="Definiere eine Funktion, die ausgeführt wird, sobald der Button gedrückt wurde.">Button::setCallback()</a> zu nutze. Eine Lambdafunktion erstellen wir nicht wie sonst mit <code class="JavaDocCode"><br/>
+void meineFunktion(parameter) {<br/>
+    Tu irgendwas<br/>
+}<br/>
+</code> sondern mit einem ganz neuen Syntax, der allerdings nicht komplizierter ist: <code class="JavaDocCode"><br/>
+CallLambda([Variablen von Aussen die wir verwenden wollen] (Parameter) {<br/>
+Tu irgendwas; return 0; })<br/>
+</code> Mit <code>return</code> 0 stellen wir sicher das alles funktioniert hat. </p>
+<p >Diese Funktion können wir jetzt einfach mit <code class="JavaDocCode"><br/>
+meineFunktion(CallLambda([] () { Tu etwas; return 0; }))<br/>
+</code> als Parameter an eine andere Funktion übergeben. </p>
+<p >Lambdafunktionen werden häufig für sogenannte <a href="https://de.wikipedia.org/wiki/Rückruffunktion">Callback Funktionen</a> verwendet. </p>
 </div><hr/>Die Dokumentation für diese Struktur wurde erzeugt aufgrund der Datei:<ul>
 <li>/Users/dennis/CloudStation/Schule/Modellbahn/Libraries-Modellbahn/include/<a class="el" href="_button_8h_source.html">Button.h</a></li>
 </ul>
@@ -123,7 +134,7 @@ $(document).ready(function(){initNavTree('struct_call_lambda.html',''); initResi
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="struct_call_lambda.html">CallLambda</a></li>
-    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>
 </body>

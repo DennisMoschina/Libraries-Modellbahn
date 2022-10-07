@@ -26,26 +26,13 @@ Der \mbox{\hyperlink{class_button}{Button}} wird für eine bestimmte Zeit deakti
 Der \mbox{\hyperlink{class_button}{Button}} ist mit dem internen PULLUP-\/\+Widerstand angeschlossen, das heißt, dass der \mbox{\hyperlink{class_button}{Button}} nur zwischen {\ttfamily GND} und dem Pin ohne einen externen Widerstand angeschlossen wird.
 
 \begin{DoxyNote}{Zu beachten}
-Alle Instanzen müssen vor oder im setup erzeugt werdenund die Methode \mbox{\hyperlink{class_button_a9d285e131ce246682d1dc2b0f9e5f3b7}{Button\+::handle\+Button()}} muss regelmäßig in kurzen Zeitabständen aufgerufen werden um jeden Druck auf den \mbox{\hyperlink{class_button}{Button}} zu registrieren. Die einfachste Möglichkeit hierfür ist 
-\begin{DoxyCode}{0}
-\DoxyCodeLine{ \textcolor{keywordtype}{void} loop() \{}
-\DoxyCodeLine{  myButton.handleButton();}
-\DoxyCodeLine{  delay(10);}
-\DoxyCodeLine{\} }
-
-\end{DoxyCode}
- Bei der Verwendung von mehreren Buttons wird die Verwendung von \mbox{\hyperlink{class_button_manager}{Button\+Manager}} empfohlen.
+Alle Instanzen müssen vor oder im setup erzeugt werdenund die Methode \mbox{\hyperlink{class_button_a9d285e131ce246682d1dc2b0f9e5f3b7}{Button\+::handle\+Button()}} muss regelmäßig in kurzen Zeitabständen aufgerufen werden um jeden Druck auf den \mbox{\hyperlink{class_button}{Button}} zu registrieren. Die einfachste Möglichkeit hierfür ist {\ttfamily void loop() \{\newline  my\+Button.\+handle\+Button();\newline  delay(10);\newline\}} Bei der Verwendung von mehreren Buttons wird die Verwendung von \mbox{\hyperlink{class_button_manager}{Button\+Manager}} empfohlen.
 \end{DoxyNote}
 \begin{DoxyAttention}{Achtung}
 Das Überprüfen des Buttons sollte nicht in einem Timer geschehen, da es so zu Problemen mit delay() und einigen anderen Funktionen kommen kann.
 \end{DoxyAttention}
 \begin{DoxyPrecond}{Vorbedingung}
-Um die Funktionen von \mbox{\hyperlink{class_button}{Button}} nutzen zu können, muss zuerst ein Objekt von \mbox{\hyperlink{class_button}{Button}} erzeugt werden. 
-\begin{DoxyCode}{0}
-\DoxyCodeLine{Buttton myButton = \mbox{\hyperlink{class_button_a9ba43424a686758b870554d19064fb83}{Button}}(buttonPin, lightPin, delayTime); }
-
-\end{DoxyCode}
- {\ttfamily button\+Pin}, {\ttfamily light\+Pin}, {\ttfamily delay\+Time} müssen dabei vorher angegebn werden oder direkt durch eine Zahl ersetzt werden. 
+Um die Funktionen von \mbox{\hyperlink{class_button}{Button}} nutzen zu können, muss zuerst ein Objekt von \mbox{\hyperlink{class_button}{Button}} erzeugt werden. {\ttfamily Buttton my\+Button = Button(button\+Pin, light\+Pin, delay\+Time);} {\ttfamily button\+Pin}, {\ttfamily light\+Pin}, {\ttfamily delay\+Time} müssen dabei vorher angegebn werden oder direkt durch eine Zahl ersetzt werden. 
 \end{DoxyPrecond}
 
 
@@ -85,15 +72,7 @@ Wird {\ttfamily delay\+Time} nicht angegeben, wird der Standartwert 60 verwendet
 Wurde der \mbox{\hyperlink{class_button}{Button}} gedrückt und ist aktiv, wird die durch \mbox{\hyperlink{class_button_a54a2b43509e6c28ba8b0a4c003ded6ba}{set\+Callback()}} festgelegte Funktion ausgeführt.
 
 \begin{DoxyNote}{Zu beachten}
-Diese Methode muss regelmäßig in kurzen Zeitabständen aufgerufen werden um jeden Druck auf den \mbox{\hyperlink{class_button}{Button}} zu registrieren. Die einfachste Möglichkeit hierfür ist\+: 
-\begin{DoxyCode}{0}
-\DoxyCodeLine{\textcolor{keywordtype}{void} loop() \{}
-\DoxyCodeLine{    myButton.handleButton();}
-\DoxyCodeLine{    delay(10);}
-\DoxyCodeLine{\}}
-
-\end{DoxyCode}
-
+Diese Methode muss regelmäßig in kurzen Zeitabständen aufgerufen werden um jeden Druck auf den \mbox{\hyperlink{class_button}{Button}} zu registrieren. Die einfachste Möglichkeit hierfür ist\+: {\ttfamily \newlinevoid loop() \{\newline    my\+Button.\+handle\+Button();\newline    delay(10);\newline\}\newline}
 \end{DoxyNote}
 \begin{DoxyAttention}{Achtung}
 Das Überprüfen des Buttons sollte nicht in einem Timer geschehen, da es so zu Problemen mit {\ttfamily delay()} und einigen anderen Funktionen kommen kann. 
@@ -117,7 +96,7 @@ Verwendung\+:
 \begin{DoxyCodeInclude}{0}
 
 \end{DoxyCodeInclude}
-
+ 
 
 Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Datei\+:\begin{DoxyCompactItemize}
 \item 

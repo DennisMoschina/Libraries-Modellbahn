@@ -1,0 +1,78 @@
+\hypertarget{class_diorama_slave}{}\doxysection{Diorama\+Slave Klassenreferenz}
+\label{class_diorama_slave}\index{DioramaSlave@{DioramaSlave}}
+
+
+Diese Klasse wird genutzt, um die Kommunikation zwischen einem Arduino, welcher das Ausführen in den einzelnen Modulen steuert.  
+
+
+
+
+{\ttfamily \#include $<$Diorama\+Slave.\+h$>$}
+
+Klassendiagramm für Diorama\+Slave\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_diorama_slave}
+\end{center}
+\end{figure}
+\doxysubsection*{Öffentliche Methoden}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_diorama_slave_a20da27bae4ebac542e31bd8692635257}\label{class_diorama_slave_a20da27bae4ebac542e31bd8692635257}} 
+{\bfseries Diorama\+Slave} (int address)
+\item 
+\mbox{\Hypertarget{class_diorama_slave_ac83f3cf42eb4faf34689c61b3471062a}\label{class_diorama_slave_ac83f3cf42eb4faf34689c61b3471062a}} 
+void {\bfseries begin} ()
+\begin{DoxyCompactList}\small\item\em Diese Funktion startet die Kommunikation und konfiguriert alle restlichen Funktionen. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_diorama_slave_a89fee8170a19edac37786b6a83fa6bf0}{should\+Perform}} ()
+\begin{DoxyCompactList}\small\item\em Prüfe, ob die Aktion ausgeführt werden soll. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_diorama_slave_a923278ef6c1953c80ab08cec17c7038c}{performed}} ()
+\begin{DoxyCompactList}\small\item\em Signalisiere, dass die Aktion ausgeführt wurde. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_diorama_slave_a1c79615602c6299fdca7d201cc7687b9}\label{class_diorama_slave_a1c79615602c6299fdca7d201cc7687b9}} 
+void {\bfseries received} (int how\+Many)
+\item 
+\mbox{\Hypertarget{class_diorama_slave_a9408223fb3db6a25af9cfcf44174f8ca}\label{class_diorama_slave_a9408223fb3db6a25af9cfcf44174f8ca}} 
+void {\bfseries requested\+Sound} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Ausführliche Beschreibung}
+Diese Klasse wird genutzt, um die Kommunikation zwischen einem Arduino, welcher das Ausführen in den einzelnen Modulen steuert. 
+
+\begin{DoxyAuthor}{Autor}
+Dennis Moschina 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Dokumentation der Elementfunktionen}
+\mbox{\Hypertarget{class_diorama_slave_a923278ef6c1953c80ab08cec17c7038c}\label{class_diorama_slave_a923278ef6c1953c80ab08cec17c7038c}} 
+\index{DioramaSlave@{DioramaSlave}!performed@{performed}}
+\index{performed@{performed}!DioramaSlave@{DioramaSlave}}
+\doxysubsubsection{\texorpdfstring{performed()}{performed()}}
+{\footnotesize\ttfamily void Diorama\+Slave\+::performed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Signalisiere, dass die Aktion ausgeführt wurde. 
+
+\begin{DoxyNote}{Zu beachten}
+Muss aufgerufen werden, da sonst {\ttfamily \mbox{\hyperlink{class_diorama_slave_a89fee8170a19edac37786b6a83fa6bf0}{should\+Perform}}} nicht richtig funktioniert 
+\end{DoxyNote}
+\mbox{\Hypertarget{class_diorama_slave_a89fee8170a19edac37786b6a83fa6bf0}\label{class_diorama_slave_a89fee8170a19edac37786b6a83fa6bf0}} 
+\index{DioramaSlave@{DioramaSlave}!shouldPerform@{shouldPerform}}
+\index{shouldPerform@{shouldPerform}!DioramaSlave@{DioramaSlave}}
+\doxysubsubsection{\texorpdfstring{shouldPerform()}{shouldPerform()}}
+{\footnotesize\ttfamily bool Diorama\+Slave\+::should\+Perform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Prüfe, ob die Aktion ausgeführt werden soll. 
+
+\begin{DoxyReturn}{Rückgabe}
+ob die Aktion ausgeführt werden soll 
+\end{DoxyReturn}
+
+
+Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Datei\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/dennis/\+Cloud\+Station/\+Schule/\+Modellbahn/\+Libraries-\/\+Modellbahn/include/Diorama\+Slave.\+h\end{DoxyCompactItemize}

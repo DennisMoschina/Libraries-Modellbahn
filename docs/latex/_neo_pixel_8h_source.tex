@@ -1,0 +1,43 @@
+\hypertarget{_neo_pixel_8h_source}{}\doxysection{Neo\+Pixel.\+h}
+\label{_neo_pixel_8h_source}\index{/Users/dennis/CloudStation/Schule/Modellbahn/Libraries-\/Modellbahn/include/NeoPixel.h@{/Users/dennis/CloudStation/Schule/Modellbahn/Libraries-\/Modellbahn/include/NeoPixel.h}}
+\mbox{\hyperlink{_neo_pixel_8h}{gehe zur Dokumentation dieser Datei}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#ifndef NEOPIXEL\_H}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#define NEOPIXEL\_H}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <Arduino.h>}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <FastLED.h>}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{34 \textcolor{keyword}{class }\mbox{\hyperlink{class_neo_pixel}{NeoPixel}} \{}
+\DoxyCodeLine{35   \textcolor{keyword}{public}:}
+\DoxyCodeLine{46     \mbox{\hyperlink{class_neo_pixel_a6ad2ee6bce11578331c17cdc9c6f9122}{NeoPixel}}(\textcolor{keywordtype}{int} numPixel, \textcolor{keywordtype}{int} pin);}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{67     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_neo_pixel_a67e07318dc4aa8becf3edd3f75366413}{fill}}(CRGB color, \textcolor{keywordtype}{int} start = 0, \textcolor{keywordtype}{int} end = -\/1);}
+\DoxyCodeLine{87     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_neo_pixel_a0a3f77bcb43b73e4b88b13446291317b}{fill}}(\textcolor{keywordtype}{int} r, \textcolor{keywordtype}{int} g, \textcolor{keywordtype}{int} b, \textcolor{keywordtype}{int} start = 0, \textcolor{keywordtype}{int} end = -\/1);}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{102     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_neo_pixel_acd86a2fe450c8c6dcce8c993789135c2}{setColor}}(CRGB color, \textcolor{keywordtype}{int} pixel);}
+\DoxyCodeLine{115     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_neo_pixel_a5db05ed6677dec2eb19e731dc79463b0}{setColor}}(\textcolor{keywordtype}{int} r, \textcolor{keywordtype}{int} g, \textcolor{keywordtype}{int} b, \textcolor{keywordtype}{int} pixel);}
+\DoxyCodeLine{116 }
+\DoxyCodeLine{129     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_neo_pixel_ae088cc6a5f22401a4f56696d13a8cc69}{setBrightness}}(\textcolor{keywordtype}{int} brightness = 255, \textcolor{keywordtype}{int} pixel = -\/1);}
+\DoxyCodeLine{130 }
+\DoxyCodeLine{138     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_neo_pixel_ae1b399d75b88295065e6846d3e0459c9}{off}}();}
+\DoxyCodeLine{139 }
+\DoxyCodeLine{149     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_neo_pixel_a2baec551d5892662019a04f5943c8995}{getNumberOfPixels}}();}
+\DoxyCodeLine{150 }
+\DoxyCodeLine{162     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_neo_pixel_a4dc97c65eb9f29158897527934787786}{flash}}(\textcolor{keywordtype}{int} duration = 1);}
+\DoxyCodeLine{175     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_neo_pixel_a592b314629766624baaf3af2f2ba9868}{torch}}(\textcolor{keywordtype}{int} duration = 10);}
+\DoxyCodeLine{187     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_neo_pixel_ac8f4194cc87c39b2a47e2baba6bf54f6}{fire}}(\textcolor{keywordtype}{int} duration = 10);}
+\DoxyCodeLine{188 }
+\DoxyCodeLine{189   \textcolor{keyword}{private}:}
+\DoxyCodeLine{190     \textcolor{keywordtype}{int} pin;}
+\DoxyCodeLine{191     \textcolor{keywordtype}{int} numPixel;}
+\DoxyCodeLine{192     CRGBSet leds = CRGBSet(\textcolor{keyword}{new} CRGB[0], 0);}
+\DoxyCodeLine{193 \};}
+\DoxyCodeLine{194 }
+\DoxyCodeLine{195 }
+\DoxyCodeLine{196 }
+\DoxyCodeLine{197 }
+\DoxyCodeLine{198 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

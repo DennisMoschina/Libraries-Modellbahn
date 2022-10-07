@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['lighteffects_30',['LightEffects',['../class_light_effects.html',1,'']]]
+  ['dioramamaster_0',['DioramaMaster',['../class_diorama_master.html',1,'']]],
+  ['dioramaslave_1',['DioramaSlave',['../class_diorama_slave.html',1,'']]]
 ];

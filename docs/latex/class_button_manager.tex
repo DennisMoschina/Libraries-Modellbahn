@@ -43,7 +43,7 @@ Verwendung\+:
 \begin{DoxyCodeInclude}{0}
 
 \end{DoxyCodeInclude}
-\mbox{\Hypertarget{class_button_manager_a7ed76c846a1b745a5bb75d1af973fd83}\label{class_button_manager_a7ed76c846a1b745a5bb75d1af973fd83}} 
+ \mbox{\Hypertarget{class_button_manager_a7ed76c846a1b745a5bb75d1af973fd83}\label{class_button_manager_a7ed76c846a1b745a5bb75d1af973fd83}} 
 \index{ButtonManager@{ButtonManager}!handleButtons@{handleButtons}}
 \index{handleButtons@{handleButtons}!ButtonManager@{ButtonManager}}
 \doxysubsubsection{\texorpdfstring{handleButtons()}{handleButtons()}}
@@ -54,15 +54,7 @@ Verwendung\+:
 Überprüfe, ob ein \mbox{\hyperlink{class_button}{Button}} gedrückt wurde oder ob einer wieder aktiviert werden kann. 
 
 \begin{DoxyNote}{Zu beachten}
-Diese Methode muss regelmäßig in kurzen Zeitabständen aufgerufen werden um jeden Druck auf einen \mbox{\hyperlink{class_button}{Button}} zu registrieren. Die einfachste Möglichkeit hierfür ist 
-\begin{DoxyCode}{0}
-\DoxyCodeLine{ \textcolor{keywordtype}{void} loop() \{}
-\DoxyCodeLine{  \mbox{\hyperlink{class_button_manager_a7ed76c846a1b745a5bb75d1af973fd83}{ButtonManager::handleButtons}}();}
-\DoxyCodeLine{  delay(10);}
-\DoxyCodeLine{\} }
-
-\end{DoxyCode}
- 
+Diese Methode muss regelmäßig in kurzen Zeitabständen aufgerufen werden um jeden Druck auf einen \mbox{\hyperlink{class_button}{Button}} zu registrieren. Die einfachste Möglichkeit hierfür ist {\ttfamily void loop() \{\newline  Button\+Manager\+::handle\+Buttons();\newline  delay(10);\newline\}} 
 \end{DoxyNote}
 \begin{DoxyAttention}{Achtung}
 Das Überprüfen der Buttons sollte nicht in einem Timer geschehen, da es so zu Problemen mit delay() und einigen anderen Funktionen kommen kann.

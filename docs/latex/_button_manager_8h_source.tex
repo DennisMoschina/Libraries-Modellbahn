@@ -1,0 +1,29 @@
+\hypertarget{_button_manager_8h_source}{}\doxysection{Button\+Manager.\+h}
+\label{_button_manager_8h_source}\index{/Users/dennis/CloudStation/Schule/Modellbahn/Libraries-\/Modellbahn/include/ButtonManager.h@{/Users/dennis/CloudStation/Schule/Modellbahn/Libraries-\/Modellbahn/include/ButtonManager.h}}
+\mbox{\hyperlink{_button_manager_8h}{gehe zur Dokumentation dieser Datei}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#ifndef BUTTON\_MANAGER\_H}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#define BUTTON\_MANAGER\_H}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <Arduino.h>}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_button_8h}{Button.h}}"{}}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{22 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_button_list_item}{ButtonListItem}} \{}
+\DoxyCodeLine{23   \mbox{\hyperlink{class_button}{Button}}* button;}
+\DoxyCodeLine{24   \mbox{\hyperlink{struct_button_list_item}{ButtonListItem}}* next;}
+\DoxyCodeLine{25 \};}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{36 \textcolor{keyword}{class }\mbox{\hyperlink{class_button_manager}{ButtonManager}} \{}
+\DoxyCodeLine{37   \textcolor{keyword}{public}:}
+\DoxyCodeLine{46     \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_button_manager_abac14494a447472d4611f12f913d5260}{addButton}}(\mbox{\hyperlink{class_button}{Button}}* newButton);}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48 }
+\DoxyCodeLine{66     \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_button_manager_a7ed76c846a1b745a5bb75d1af973fd83}{handleButtons}}();}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{68   \textcolor{keyword}{private}:}
+\DoxyCodeLine{69     \textcolor{keyword}{static} \mbox{\hyperlink{struct_button_list_item}{ButtonListItem}}* listHead;}
+\DoxyCodeLine{70 \};}
+\DoxyCodeLine{71 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

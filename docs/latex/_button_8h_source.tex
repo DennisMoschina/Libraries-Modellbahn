@@ -1,0 +1,149 @@
+\hypertarget{_button_8h_source}{}\doxysection{Button.\+h}
+\label{_button_8h_source}\index{/Users/dennis/CloudStation/Schule/Modellbahn/Libraries-\/Modellbahn/include/Button.h@{/Users/dennis/CloudStation/Schule/Modellbahn/Libraries-\/Modellbahn/include/Button.h}}
+\mbox{\hyperlink{_button_8h}{gehe zur Dokumentation dieser Datei}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#ifndef BUTTON\_H}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#define BUTTON\_H}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include "{}Arduino.h"{}}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include <Wire.h>}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 \textcolor{comment}{/*}}
+\DoxyCodeLine{19 \textcolor{comment}{ * This portion is derived from:}}
+\DoxyCodeLine{20 \textcolor{comment}{ * https://github.com/ASA1976/RAP-\/BTL/blob/master/rap-\/btl/invocation.hpp\#L1}}
+\DoxyCodeLine{21 \textcolor{comment}{ *}}
+\DoxyCodeLine{22 \textcolor{comment}{ * © 2020 Aaron Sami Abassi}}
+\DoxyCodeLine{23 \textcolor{comment}{ * Licensed under the Academic Free License version 3.0}}
+\DoxyCodeLine{24 \textcolor{comment}{ */}}
+\DoxyCodeLine{25 \textcolor{keyword}{template} <\textcolor{keyword}{typename} Resultant, \textcolor{keyword}{typename}... Parametric>}
+\DoxyCodeLine{26 \textcolor{keyword}{struct }Invocative \{}
+\DoxyCodeLine{27     \textcolor{keyword}{using }Interfacial = Resultant(\textcolor{keyword}{const} \textcolor{keywordtype}{void}* \textcolor{keyword}{const}, Parametric...);}
+\DoxyCodeLine{28     Interfacial* interface;}
+\DoxyCodeLine{29     \textcolor{keyword}{const} \textcolor{keywordtype}{void}* locality;}
+\DoxyCodeLine{30     Resultant operator()(Parametric... arguments)\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{31         \textcolor{keywordflow}{return} interface(locality, arguments...);}
+\DoxyCodeLine{32     \}}
+\DoxyCodeLine{33 \};}
+\DoxyCodeLine{34 \textcolor{keyword}{template} <\textcolor{keyword}{typename} Procedural, \textcolor{keyword}{typename} Resultant, \textcolor{keyword}{typename}... Parametric>}
+\DoxyCodeLine{35 Resultant}
+\DoxyCodeLine{36 InvokeProcedure(\textcolor{keyword}{const} \textcolor{keywordtype}{void}* locality, Parametric... arguments) \{}
+\DoxyCodeLine{37     \textcolor{keyword}{using }Classificatory = Procedural* \textcolor{keyword}{const}*;}
+\DoxyCodeLine{38     \textcolor{keyword}{const} Classificatory objective = \textcolor{keyword}{static\_cast<}Classificatory\textcolor{keyword}{>}(locality);}
+\DoxyCodeLine{39     \textcolor{keywordflow}{return} (**objective)(arguments...);}
+\DoxyCodeLine{40 \}}
+\DoxyCodeLine{41 \textcolor{keyword}{template} <\textcolor{keyword}{typename} Procedural, \textcolor{keyword}{typename} Resultant, \textcolor{keyword}{typename}... Parametric>}
+\DoxyCodeLine{42 \textcolor{keyword}{static} \textcolor{keyword}{inline} Invocative<Resultant, Parametric...>}
+\DoxyCodeLine{43 AssignInvokeProcedure(Procedural* \textcolor{keyword}{const}\& locality) \{}
+\DoxyCodeLine{44     \textcolor{keyword}{using }Specific = Invocative<Resultant, Parametric...>;}
+\DoxyCodeLine{45     \textcolor{keyword}{static} \textcolor{keyword}{auto}\& Invoke = InvokeProcedure<Procedural, Resultant, Parametric...>;}
+\DoxyCodeLine{46     \textcolor{keyword}{const} Specific invocation = \{ \&Invoke, \&locality \};}
+\DoxyCodeLine{47     \textcolor{keywordflow}{return} invocation;}
+\DoxyCodeLine{48 \}}
+\DoxyCodeLine{49 \textcolor{comment}{/*}}
+\DoxyCodeLine{50 \textcolor{comment}{ * Only the above source code is subject to copyright notice as a derived work.}}
+\DoxyCodeLine{51 \textcolor{comment}{ * It can be further modified but the copyright notice must remain.}}
+\DoxyCodeLine{52 \textcolor{comment}{ * This derivative only contains portions relating to invoking lambdas.}}
+\DoxyCodeLine{53 \textcolor{comment}{ */}}
+\DoxyCodeLine{54 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{55 \textcolor{comment}{/*}}
+\DoxyCodeLine{56 \textcolor{comment}{ * SUPPORT CODE FOR THE LIBRARY AUTHOR (should only need to modify the macro)}}
+\DoxyCodeLine{57 \textcolor{comment}{ */}}
+\DoxyCodeLine{58 \textcolor{preprocessor}{\#define CALLBACK\_TYPE\_LIST int}}
+\DoxyCodeLine{59 \textcolor{comment}{/*}}
+\DoxyCodeLine{60 \textcolor{comment}{ * Format for CALLBACK\_TYPE\_LIST (must contain at least a return type):}}
+\DoxyCodeLine{61 \textcolor{comment}{ *}}
+\DoxyCodeLine{62 \textcolor{comment}{ * RETURN\_TYPE, ARGUMENT1\_TYPE, ARGUMENT2\_TYPE, ...}}
+\DoxyCodeLine{63 \textcolor{comment}{ */}}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66 \textcolor{keyword}{struct }lambda\_callback\_t \{}
+\DoxyCodeLine{67     \textcolor{keyword}{using }invoke\_t = Invocative<CALLBACK\_TYPE\_LIST>;}
+\DoxyCodeLine{68     \textcolor{keyword}{using }remover\_t = void(\textcolor{keywordtype}{void}*);}
+\DoxyCodeLine{69     invoke\_t invoke;}
+\DoxyCodeLine{70     \textcolor{keywordtype}{void}* lambda;}
+\DoxyCodeLine{71     remover\_t* remove;}
+\DoxyCodeLine{72     lambda\_callback\_t() \{}
+\DoxyCodeLine{73         invoke.interface = 0;}
+\DoxyCodeLine{74         invoke.locality = 0;}
+\DoxyCodeLine{75         lambda = 0;}
+\DoxyCodeLine{76         remove = 0;}
+\DoxyCodeLine{77     \}}
+\DoxyCodeLine{78     lambda\_callback\_t(\textcolor{keyword}{const} lambda\_callback\_t\& copy) \{}
+\DoxyCodeLine{79         invoke.interface = copy.invoke.interface;}
+\DoxyCodeLine{80         invoke.locality = \&lambda;}
+\DoxyCodeLine{81         lambda = copy.lambda;}
+\DoxyCodeLine{82         remove = copy.remove;}
+\DoxyCodeLine{83     \}}
+\DoxyCodeLine{84     \textcolor{keywordtype}{void} replace(\textcolor{keyword}{const} lambda\_callback\_t\& with) \{}
+\DoxyCodeLine{85         \textcolor{keywordflow}{if} (lambda)}
+\DoxyCodeLine{86             remove(lambda);}
+\DoxyCodeLine{87         invoke.interface = with.invoke.interface;}
+\DoxyCodeLine{88         invoke.locality = \&lambda;}
+\DoxyCodeLine{89         lambda = with.lambda;}
+\DoxyCodeLine{90         remove = with.remove;}
+\DoxyCodeLine{91     \}}
+\DoxyCodeLine{92     \textcolor{keywordtype}{void} cleanup() \{}
+\DoxyCodeLine{93     \textcolor{keywordflow}{if} (lambda)}
+\DoxyCodeLine{94             remove(lambda);}
+\DoxyCodeLine{95         invoke.interface = 0;}
+\DoxyCodeLine{96         invoke.locality = 0;}
+\DoxyCodeLine{97         lambda = 0;}
+\DoxyCodeLine{98         remove = 0;}
+\DoxyCodeLine{99     \}}
+\DoxyCodeLine{100   \};}
+\DoxyCodeLine{101   \textcolor{keyword}{template} <\textcolor{keyword}{typename} LambdaTypical>}
+\DoxyCodeLine{102   \textcolor{keyword}{static} \textcolor{keyword}{inline} lambda\_callback\_t}
+\DoxyCodeLine{103   \mbox{\hyperlink{struct_call_lambda}{CallLambda}}(\textcolor{keyword}{const} LambdaTypical\& lambda) \{}
+\DoxyCodeLine{104     \textcolor{keyword}{static} \textcolor{keyword}{auto} RemoveLambda = [](\textcolor{keywordtype}{void}* pointer) \{}
+\DoxyCodeLine{105         \textcolor{keyword}{delete} \textcolor{keyword}{static\_cast<}LambdaTypical*\textcolor{keyword}{>}(pointer);}
+\DoxyCodeLine{106     \};}
+\DoxyCodeLine{107     \textcolor{keyword}{static} \textcolor{keyword}{auto}\& Assign = AssignInvokeProcedure<LambdaTypical, CALLBACK\_TYPE\_LIST>;}
+\DoxyCodeLine{108     lambda\_callback\_t callback;}
+\DoxyCodeLine{109     callback.lambda = \textcolor{keyword}{new} LambdaTypical(lambda);}
+\DoxyCodeLine{110     callback.invoke = Assign(*\textcolor{keyword}{reinterpret\_cast<}LambdaTypical**\textcolor{keyword}{>}(\&callback.lambda));}
+\DoxyCodeLine{111     callback.remove = RemoveLambda;}
+\DoxyCodeLine{112     \textcolor{keywordflow}{return} callback; \textcolor{comment}{// Not intended for direct invocation, copying only}}
+\DoxyCodeLine{113   \}}
+\DoxyCodeLine{114   \textcolor{comment}{// CALLBACK\_TYPE\_LIST is no longer needed}}
+\DoxyCodeLine{115 \textcolor{preprocessor}{  \#undef CALLBACK\_TYPE\_LIST}}
+\DoxyCodeLine{116 \textcolor{comment}{//}}
+\DoxyCodeLine{117 \textcolor{comment}{// ALL OF THE ABOVE MUST BE INCLUDED IN LIBRARY USER HEADERS}}
+\DoxyCodeLine{118 \textcolor{comment}{//}}
+\DoxyCodeLine{119 \textcolor{comment}{// -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{121 \textcolor{comment}{}}
+\DoxyCodeLine{122 }
+\DoxyCodeLine{123 }
+\DoxyCodeLine{191 \textcolor{keyword}{class }\mbox{\hyperlink{class_button}{Button}} \{}
+\DoxyCodeLine{192   \textcolor{keyword}{public}:}
+\DoxyCodeLine{205     \mbox{\hyperlink{class_button_a9ba43424a686758b870554d19064fb83}{Button}}(\textcolor{keywordtype}{byte} inputPin, \textcolor{keywordtype}{byte} lightPin, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} delayTime = 60);}
+\DoxyCodeLine{206     \mbox{\hyperlink{class_button}{\string~Button}}() \{}
+\DoxyCodeLine{207       callback.cleanup();}
+\DoxyCodeLine{208     \}}
+\DoxyCodeLine{209 }
+\DoxyCodeLine{219         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_button_a54a2b43509e6c28ba8b0a4c003ded6ba}{setCallback}}(\textcolor{keyword}{const} lambda\_callback\_t\& action) \{}
+\DoxyCodeLine{220       this-\/>callback.replace(action);}
+\DoxyCodeLine{221     \}}
+\DoxyCodeLine{222 }
+\DoxyCodeLine{244     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_button_a9d285e131ce246682d1dc2b0f9e5f3b7}{handleButton}}();}
+\DoxyCodeLine{245 }
+\DoxyCodeLine{246     \textcolor{keyword}{private}:}
+\DoxyCodeLine{247         \textcolor{keywordtype}{byte} inputPin;    \textcolor{comment}{// Pin des Buttons}}
+\DoxyCodeLine{248         \textcolor{keywordtype}{byte} lightPin;    \textcolor{comment}{// Pin des Lichts}}
+\DoxyCodeLine{249         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} delayTime;    \textcolor{comment}{// Zeit, die der Button deaktiviert ist (in Sekunden)}}
+\DoxyCodeLine{250 }
+\DoxyCodeLine{251         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} lastPress = 0;   \textcolor{comment}{// Zeit, zu der der Button zum letzten Mal gedrückt wurde}}
+\DoxyCodeLine{252         \textcolor{keywordtype}{bool} activated = \textcolor{keyword}{true};}
+\DoxyCodeLine{253 }
+\DoxyCodeLine{254         lambda\_callback\_t callback;}
+\DoxyCodeLine{255 }
+\DoxyCodeLine{256         \textcolor{keywordtype}{void} init();}
+\DoxyCodeLine{257 }
+\DoxyCodeLine{258         \textcolor{keywordtype}{int} buttonPressed();}
+\DoxyCodeLine{259         \textcolor{keywordtype}{void} checkForTime();}
+\DoxyCodeLine{260 \};}
+\DoxyCodeLine{261 }
+\DoxyCodeLine{262 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,9 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.9.1"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Modellbahn: Button Klassenreferenz</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -17,7 +17,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
   $(document).ready(function() { init_search(); });
 /* @license-end */
 </script>
@@ -28,20 +28,17 @@
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
- <tr style="height: 56px;">
+ <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="ModellbahnAG Logo.jpg"/></td>
-  <td id="projectalign" style="padding-left: 0.5em;">
+  <td id="projectalign">
    <div id="projectname">Modellbahn
    </div>
    <div id="projectbrief">Libraries für verschiedene Funktionen in der ModellbahnAG</div>
   </td>
-   <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
-          <img id="MSearchSelect" src="search/mag_sel.svg"
-               onmouseover="return searchBox.OnSearchSelectShow()"
-               onmouseout="return searchBox.OnSearchSelectHide()"
-               alt=""/>
-          <input type="text" id="MSearchField" value="Suchen" accesskey="S"
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Suchen" accesskey="S"
                onfocus="searchBox.OnSearchFieldFocus(true)" 
                onblur="searchBox.OnSearchFieldFocus(false)" 
                onkeyup="searchBox.OnSearchFieldChange(event)"/>
@@ -55,10 +52,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Erzeugt von Doxygen 1.9.1 -->
+<!-- Erzeugt von Doxygen 1.9.5 -->
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'Suchen','.html');
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 </div><!-- top -->
@@ -73,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Suchen','.html');
   </div>
 </div>
 <script type="text/javascript">
-/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(document).ready(function(){initNavTree('class_button.html',''); initResizable(); });
 /* @license-end */
 </script>
@@ -87,17 +84,23 @@ $(document).ready(function(){initNavTree('class_button.html',''); initResizable(
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
 </div>
 
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Öffentliche Methoden</a> &#124;
 <a href="class_button-members.html">Aufstellung aller Elemente</a>  </div>
-  <div class="headertitle">
-<div class="title">Button Klassenreferenz<div class="ingroups"><a class="el" href="group__button.html">Button Management</a></div></div>  </div>
+  <div class="headertitle"><div class="title">Button Klassenreferenz<div class="ingroups"><a class="el" href="group__button.html">Button Management</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
@@ -106,7 +109,7 @@ $(document).ready(function(){initNavTree('class_button.html',''); initResizable(
 
 <p><code>#include &lt;<a class="el" href="_button_8h_source.html">Button.h</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Öffentliche Methoden</h2></td></tr>
 <tr class="memitem:a9ba43424a686758b870554d19064fb83"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_button.html#a9ba43424a686758b870554d19064fb83">Button</a> (byte inputPin, byte lightPin, unsigned long delayTime=60)</td></tr>
 <tr class="memdesc:a9ba43424a686758b870554d19064fb83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erstelle eine Instanz der Klasse <a class="el" href="class_button.html" title="Der Button wird für eine bestimmte Zeit deaktiviert, nachdem er gedrückt wurde. Um dies zu verdeutlic...">Button</a>.  <a href="class_button.html#a9ba43424a686758b870554d19064fb83">Mehr ...</a><br /></td></tr>
@@ -119,20 +122,17 @@ $(document).ready(function(){initNavTree('class_button.html',''); initResizable(
 <tr class="separator:a9d285e131ce246682d1dc2b0f9e5f3b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Ausführliche Beschreibung</h2>
-<div class="textblock"><p>Der <a class="el" href="class_button.html" title="Der Button wird für eine bestimmte Zeit deaktiviert, nachdem er gedrückt wurde. Um dies zu verdeutlic...">Button</a> wird für eine bestimmte Zeit deaktiviert, nachdem er gedrückt wurde. Um dies zu verdeutlichen, wird das (oft im <a class="el" href="class_button.html" title="Der Button wird für eine bestimmte Zeit deaktiviert, nachdem er gedrückt wurde. Um dies zu verdeutlic...">Button</a> eingebaute) Licht deaktiviert und wieder deaktiviert, sobald diese Zeit abgelaufen ist. </p>
-<p>Der <a class="el" href="class_button.html" title="Der Button wird für eine bestimmte Zeit deaktiviert, nachdem er gedrückt wurde. Um dies zu verdeutlic...">Button</a> ist mit dem internen PULLUP-Widerstand angeschlossen, das heißt, dass der <a class="el" href="class_button.html" title="Der Button wird für eine bestimmte Zeit deaktiviert, nachdem er gedrückt wurde. Um dies zu verdeutlic...">Button</a> nur zwischen <code>GND</code> und dem Pin ohne einen externen Widerstand angeschlossen wird.</p>
-<dl class="section note"><dt>Zu beachten</dt><dd>Alle Instanzen müssen vor oder im setup erzeugt werdenund die Methode <a class="el" href="class_button.html#a9d285e131ce246682d1dc2b0f9e5f3b7" title="Überprüfe, ob der Button gedrückt wurde oder ob er wieder aktiviert werden kann.">Button::handleButton()</a> muss regelmäßig in kurzen Zeitabständen aufgerufen werden um jeden Druck auf den <a class="el" href="class_button.html" title="Der Button wird für eine bestimmte Zeit deaktiviert, nachdem er gedrückt wurde. Um dies zu verdeutlic...">Button</a> zu registrieren. Die einfachste Möglichkeit hierfür ist <div class="fragment"><div class="line"> <span class="keywordtype">void</span> loop() {</div>
-<div class="line">  myButton.handleButton();</div>
-<div class="line">  delay(10);</div>
-<div class="line">} </div>
-</div><!-- fragment --> Bei der Verwendung von mehreren Buttons wird die Verwendung von <a class="el" href="class_button_manager.html" title="Verwalte einfach mehrere Buttons in einem Programm.">ButtonManager</a> empfohlen.</dd></dl>
+<div class="textblock"><p >Der <a class="el" href="class_button.html" title="Der Button wird für eine bestimmte Zeit deaktiviert, nachdem er gedrückt wurde. Um dies zu verdeutlic...">Button</a> wird für eine bestimmte Zeit deaktiviert, nachdem er gedrückt wurde. Um dies zu verdeutlichen, wird das (oft im <a class="el" href="class_button.html" title="Der Button wird für eine bestimmte Zeit deaktiviert, nachdem er gedrückt wurde. Um dies zu verdeutlic...">Button</a> eingebaute) Licht deaktiviert und wieder deaktiviert, sobald diese Zeit abgelaufen ist. </p>
+<p >Der <a class="el" href="class_button.html" title="Der Button wird für eine bestimmte Zeit deaktiviert, nachdem er gedrückt wurde. Um dies zu verdeutlic...">Button</a> ist mit dem internen PULLUP-Widerstand angeschlossen, das heißt, dass der <a class="el" href="class_button.html" title="Der Button wird für eine bestimmte Zeit deaktiviert, nachdem er gedrückt wurde. Um dies zu verdeutlic...">Button</a> nur zwischen <code>GND</code> und dem Pin ohne einen externen Widerstand angeschlossen wird.</p>
+<dl class="section note"><dt>Zu beachten</dt><dd>Alle Instanzen müssen vor oder im setup erzeugt werdenund die Methode <a class="el" href="class_button.html#a9d285e131ce246682d1dc2b0f9e5f3b7" title="Überprüfe, ob der Button gedrückt wurde oder ob er wieder aktiviert werden kann.">Button::handleButton()</a> muss regelmäßig in kurzen Zeitabständen aufgerufen werden um jeden Druck auf den <a class="el" href="class_button.html" title="Der Button wird für eine bestimmte Zeit deaktiviert, nachdem er gedrückt wurde. Um dies zu verdeutlic...">Button</a> zu registrieren. Die einfachste Möglichkeit hierfür ist <code class="JavaDocCode">void loop() {<br/>
+  myButton.handleButton();<br/>
+  delay(10);<br/>
+}</code> Bei der Verwendung von mehreren Buttons wird die Verwendung von <a class="el" href="class_button_manager.html" title="Verwalte einfach mehrere Buttons in einem Programm.">ButtonManager</a> empfohlen.</dd></dl>
 <dl class="section attention"><dt>Achtung</dt><dd>Das Überprüfen des Buttons sollte nicht in einem Timer geschehen, da es so zu Problemen mit delay() und einigen anderen Funktionen kommen kann.</dd></dl>
-<dl class="section pre"><dt>Vorbedingung</dt><dd>Um die Funktionen von <a class="el" href="class_button.html" title="Der Button wird für eine bestimmte Zeit deaktiviert, nachdem er gedrückt wurde. Um dies zu verdeutlic...">Button</a> nutzen zu können, muss zuerst ein Objekt von <a class="el" href="class_button.html" title="Der Button wird für eine bestimmte Zeit deaktiviert, nachdem er gedrückt wurde. Um dies zu verdeutlic...">Button</a> erzeugt werden. <div class="fragment"><div class="line">Buttton myButton = <a class="code" href="class_button.html#a9ba43424a686758b870554d19064fb83">Button</a>(buttonPin, lightPin, delayTime); </div>
-<div class="ttc" id="aclass_button_html_a9ba43424a686758b870554d19064fb83"><div class="ttname"><a href="class_button.html#a9ba43424a686758b870554d19064fb83">Button::Button</a></div><div class="ttdeci">Button(byte inputPin, byte lightPin, unsigned long delayTime=60)</div><div class="ttdoc">Erstelle eine Instanz der Klasse Button.</div></div>
-</div><!-- fragment --> <code>buttonPin</code>, <code>lightPin</code>, <code>delayTime</code> müssen dabei vorher angegebn werden oder direkt durch eine Zahl ersetzt werden. </dd></dl>
+<dl class="section pre"><dt>Vorbedingung</dt><dd>Um die Funktionen von <a class="el" href="class_button.html" title="Der Button wird für eine bestimmte Zeit deaktiviert, nachdem er gedrückt wurde. Um dies zu verdeutlic...">Button</a> nutzen zu können, muss zuerst ein Objekt von <a class="el" href="class_button.html" title="Der Button wird für eine bestimmte Zeit deaktiviert, nachdem er gedrückt wurde. Um dies zu verdeutlic...">Button</a> erzeugt werden. <code class="JavaDocCode">Buttton myButton = Button(buttonPin, lightPin, delayTime);</code> <code>buttonPin</code>, <code>lightPin</code>, <code>delayTime</code> müssen dabei vorher angegebn werden oder direkt durch eine Zahl ersetzt werden. </dd></dl>
 </div><h2 class="groupheader">Beschreibung der Konstruktoren und Destruktoren</h2>
-<a id="a9ba43424a686758b870554d19064fb83"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9ba43424a686758b870554d19064fb83">&#9670;&nbsp;</a></span>Button()</h2>
+<a id="a9ba43424a686758b870554d19064fb83" name="a9ba43424a686758b870554d19064fb83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ba43424a686758b870554d19064fb83">&#9670;&#160;</a></span>Button()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -177,8 +177,8 @@ $(document).ready(function(){initNavTree('class_button.html',''); initResizable(
 </div>
 </div>
 <h2 class="groupheader">Dokumentation der Elementfunktionen</h2>
-<a id="a9d285e131ce246682d1dc2b0f9e5f3b7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9d285e131ce246682d1dc2b0f9e5f3b7">&#9670;&nbsp;</a></span>handleButton()</h2>
+<a id="a9d285e131ce246682d1dc2b0f9e5f3b7" name="a9d285e131ce246682d1dc2b0f9e5f3b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d285e131ce246682d1dc2b0f9e5f3b7">&#9670;&#160;</a></span>handleButton()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -193,18 +193,19 @@ $(document).ready(function(){initNavTree('class_button.html',''); initResizable(
 </div><div class="memdoc">
 
 <p>Überprüfe, ob der <a class="el" href="class_button.html" title="Der Button wird für eine bestimmte Zeit deaktiviert, nachdem er gedrückt wurde. Um dies zu verdeutlic...">Button</a> gedrückt wurde oder ob er wieder aktiviert werden kann. </p>
-<p>Wurde der <a class="el" href="class_button.html" title="Der Button wird für eine bestimmte Zeit deaktiviert, nachdem er gedrückt wurde. Um dies zu verdeutlic...">Button</a> gedrückt und ist aktiv, wird die durch <a class="el" href="class_button.html#a54a2b43509e6c28ba8b0a4c003ded6ba" title="Definiere eine Funktion, die ausgeführt wird, sobald der Button gedrückt wurde.">setCallback()</a> festgelegte Funktion ausgeführt.</p>
-<dl class="section note"><dt>Zu beachten</dt><dd>Diese Methode muss regelmäßig in kurzen Zeitabständen aufgerufen werden um jeden Druck auf den <a class="el" href="class_button.html" title="Der Button wird für eine bestimmte Zeit deaktiviert, nachdem er gedrückt wurde. Um dies zu verdeutlic...">Button</a> zu registrieren. Die einfachste Möglichkeit hierfür ist: <div class="fragment"><div class="line"><span class="keywordtype">void</span> loop() {</div>
-<div class="line">    myButton.handleButton();</div>
-<div class="line">    delay(10);</div>
-<div class="line">}</div>
-</div><!-- fragment --></dd></dl>
+<p >Wurde der <a class="el" href="class_button.html" title="Der Button wird für eine bestimmte Zeit deaktiviert, nachdem er gedrückt wurde. Um dies zu verdeutlic...">Button</a> gedrückt und ist aktiv, wird die durch <a class="el" href="class_button.html#a54a2b43509e6c28ba8b0a4c003ded6ba" title="Definiere eine Funktion, die ausgeführt wird, sobald der Button gedrückt wurde.">setCallback()</a> festgelegte Funktion ausgeführt.</p>
+<dl class="section note"><dt>Zu beachten</dt><dd>Diese Methode muss regelmäßig in kurzen Zeitabständen aufgerufen werden um jeden Druck auf den <a class="el" href="class_button.html" title="Der Button wird für eine bestimmte Zeit deaktiviert, nachdem er gedrückt wurde. Um dies zu verdeutlic...">Button</a> zu registrieren. Die einfachste Möglichkeit hierfür ist: <code class="JavaDocCode"><br/>
+void loop() {<br/>
+    myButton.handleButton();<br/>
+    delay(10);<br/>
+}<br/>
+</code></dd></dl>
 <dl class="section attention"><dt>Achtung</dt><dd>Das Überprüfen des Buttons sollte nicht in einem Timer geschehen, da es so zu Problemen mit <code>delay()</code> und einigen anderen Funktionen kommen kann. </dd></dl>
 
 </div>
 </div>
-<a id="a54a2b43509e6c28ba8b0a4c003ded6ba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a54a2b43509e6c28ba8b0a4c003ded6ba">&#9670;&nbsp;</a></span>setCallback()</h2>
+<a id="a54a2b43509e6c28ba8b0a4c003ded6ba" name="a54a2b43509e6c28ba8b0a4c003ded6ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54a2b43509e6c28ba8b0a4c003ded6ba">&#9670;&#160;</a></span>setCallback()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -234,7 +235,7 @@ $(document).ready(function(){initNavTree('class_button.html',''); initResizable(
   </table>
   </dd>
 </dl>
-<p>Verwendung: </p><div class="fragment"></div><!-- fragment -->
+<p>Verwendung: </p><div class="fragment"></div><!-- fragment --> 
 </div>
 </div>
 <hr/>Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Datei:<ul>
@@ -246,7 +247,7 @@ $(document).ready(function(){initNavTree('class_button.html',''); initResizable(
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_button.html">Button</a></li>
-    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>
 </body>

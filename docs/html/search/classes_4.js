@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['neopixel_16',['NeoPixel',['../class_neo_pixel.html',1,'']]]
+  ['neopixel_0',['NeoPixel',['../class_neo_pixel.html',1,'']]]
 ];

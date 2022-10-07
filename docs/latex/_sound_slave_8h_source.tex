@@ -1,0 +1,29 @@
+\hypertarget{_sound_slave_8h_source}{}\doxysection{Sound\+Slave.\+h}
+\label{_sound_slave_8h_source}\index{/Users/dennis/CloudStation/Schule/Modellbahn/Libraries-\/Modellbahn/include/SoundSlave.h@{/Users/dennis/CloudStation/Schule/Modellbahn/Libraries-\/Modellbahn/include/SoundSlave.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef \_SOUND\_SLAVE\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define \_SOUND\_SLAVE\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <Wire.h>}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{keyword}{class }\mbox{\hyperlink{class_sound_slave}{SoundSlave}} \{}
+\DoxyCodeLine{7 \textcolor{keyword}{public}:}
+\DoxyCodeLine{8     \mbox{\hyperlink{class_sound_slave}{SoundSlave}}(\textcolor{keywordtype}{int} address);}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10     \textcolor{keywordtype}{void} begin();}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12     \textcolor{keywordtype}{void} playSoundWithID(\textcolor{keywordtype}{int} sound);}
+\DoxyCodeLine{13     \textcolor{keywordtype}{void} sendSound();}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{keyword}{private}:}
+\DoxyCodeLine{16     \textcolor{keyword}{const} \textcolor{keywordtype}{int} address;}
+\DoxyCodeLine{17     }
+\DoxyCodeLine{18     \textcolor{comment}{// int soundToPlay = -\/1;}}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20     \textcolor{keywordtype}{void} noSound();}
+\DoxyCodeLine{21 \};}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

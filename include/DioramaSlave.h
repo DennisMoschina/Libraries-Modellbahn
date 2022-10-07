@@ -35,8 +35,6 @@ public:
      */
     void performed();
 
-
-protected:
     void received(int howMany);
     void requestedSound();
     
